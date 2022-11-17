@@ -102,17 +102,17 @@ def time_stats(df):
     # TO DO: display the most common month
     popular_month = df['month'].mode()[0]
 
-    print('Most Popular Rental Month:', popular_month)
+    print('Most Popular Rental Month: {}'.format(popular_month))
 
     # TO DO: display the most common day of week
     popular_day = df['day_of_week'].mode()[0]
 
-    print('Most Popular Rental Day of the Week:', popular_day)
+    print('Most Popular Rental Day of the Week: {}'.format(popular_day))
 
     # TO DO: display the most common start hour
     popular_hour = df['hour'].mode()[0]
 
-    print('Most Popular Rental Starting Hour:', popular_hour)
+    print('Most Popular Rental Starting Hour: {}'.format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -127,12 +127,12 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
 
-    print('Most Popular Starting Location:', popular_start_station)
+    print('Most Popular Starting Location: {}'.format(popular_start_station))
 
     # TO DO: display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
 
-    print('Most Popular Ending Location:', popular_end_station)
+    print('Most Popular Ending Location: {}'.format(popular_end_station))
 
     # TO DO: display most frequent combination of start station and end station trip
     popular_trip_start_station, popular_trip_end_station = df.groupby(['Start Station', 'End Station']).size().idxmax()
@@ -155,9 +155,9 @@ def trip_duration_stats(df):
     total_years = total_time // (60*60*24*365)
     total_days = (total_time - (total_years * 60*60*24*365)) // (60*60*24)
     total_mins = (total_time - (total_years * 60*60*24*365) - (total_days * 60*60*24)) // (60*60)
-    total_secs = (total_time - (total_years * 60*60*24*365) - (total_days * 60*60*24) - (total_mins * 60*60)) // 60
+    total_seconds = (total_time - (total_years * 60*60*24*365) - (total_days * 60*60*24) - (total_mins * 60*60)) // 60
     
-    print('Total travel time is: {} seconds. This is {} year(s), {} day(s), {} minute(s), and {} second(s)'.format(total_time, total_years, total_days, total_mins, total_secs))
+    print('Total travel time is: {} seconds. This is {} year(s), {} day(s), {} minute(s), and {} second(s)'.format(total_time, total_years, total_days, total_mins, total_seconds))
 
 
     # TO DO: display mean travel time
