@@ -149,9 +149,9 @@ def trip_duration_stats(df):
     total_years = total_time // (60*60*24*365)
     total_days = (total_time - (total_years * 60*60*24*365)) // (60*60*24)
     total_mins = (total_time - (total_years * 60*60*24*365) - (total_days * 60*60*24)) // (60*60)
-    total_secs = (total_time - (total_years * 60*60*24*365) - (total_days * 60*60*24) - (total_mins * 60*60)) // 60
+    total_seconds = (total_time - (total_years * 60*60*24*365) - (total_days * 60*60*24) - (total_mins * 60*60)) // 60
     
-    print('Total travel time is: {} seconds. This is {} year(s), {} day(s), {} minute(s), and {} second(s)'.format(total_time, total_years, total_days, total_mins, total_secs))
+    print('Total travel time is: {} seconds. This is {} year(s), {} day(s), {} minute(s), and {} second(s)'.format(total_time, total_years, total_days, total_mins, total_seconds))
 
 
     # TO DO: display mean travel time
