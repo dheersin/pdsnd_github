@@ -4,10 +4,10 @@
 17 November 2022
 
 ### Project Title
-Replace the Project Title
+Daniel's Bike Share Python Project
 
 ### Description
-Describe what your project is about and what it does
+Allows the user to explore bike share data for three U.S. cities (Chicago, New York, Washington, D.C.)
 
 ### Files used
 Include the files used
