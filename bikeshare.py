@@ -150,6 +150,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
+    # Total time is in seconds, so also provides what this is in year(s), day(s), minute(s), and second(s)
     total_time = df['Trip Duration'].sum()
     total_years = total_time // (60*60*24*365)
     total_days = (total_time - (total_years * 60*60*24*365)) // (60*60*24)
