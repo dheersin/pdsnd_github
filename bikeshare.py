@@ -17,6 +17,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # Converts user input to all lower case for comparison matching and requests new input until a valid input is received.
     valid_city = False
     while not valid_city:
         city = input('What city would you like to learn about (Chicago, New York, or Washington D.C.)? ')
@@ -26,6 +27,7 @@ def get_filters():
             print('That is not a valid choice. Please check your spelling and try again.\n')
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    # Converts user input to all lower case for comparison matching and requests new input until a valid input is received.
     valid_month = False
     while not valid_month:
         month = input('What month would you like to learn about? Valid options are january-june or all.')
@@ -35,6 +37,7 @@ def get_filters():
             print('That is not a valid choice. Please check your spelling and try again.\n')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # Converts user input to all lower case for comparison matching and requests new input until a valid input is received.
     valid_day = False
     while not valid_day:
         day = input('What day would you like to learn about? Valid options are sunday-saturday or all.')
@@ -44,6 +47,8 @@ def get_filters():
             print('That is not a valid choice. Please check your spelling and try again.\n')
 
     print('-'*40)
+
+    # Return the lower case user input for use
     return city.lower(), month.lower(), day.lower()
 
 
